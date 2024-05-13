@@ -115,6 +115,7 @@ def min_node_ab(board, current_depth, depth_limit, alpha, beta):
     moves = list(board.legal_moves)
     for a in moves: 
         board.push(a)
+        
         v2, a2 = max_node_ab(board, current_depth + 1, depth_limit, alpha, beta) 
         board.pop()
         if v2 < v: 
